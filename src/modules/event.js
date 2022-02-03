@@ -34,7 +34,9 @@ class Event {
 
     get(eventId) {
         const event = this.#events[eventId];
-        if(!event) throw new Error(`[ERROR] No Event[${eventId}]`);
+        //if(!event) throw new Error(`[ERROR] No Event[${eventId}]`);
+        if(!event) event = this.#events[0];
+
         return this.#system.clone(event);
     }
 

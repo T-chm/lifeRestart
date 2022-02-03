@@ -62,12 +62,12 @@ location.search.substr(1).split('&').forEach(item => {
 });
 
 core.config({
-    defaultPropertyPoints: 20, // default number of points for a property
-    talentSelectLimit: 3, // max number of talents that can be selected
-    propertyAllocateLimit: [0, 10], // scoop of properties that can be allocated,
-    defaultPropertys: { SPR: 5 }, // default properties
+    defaultPropertyPoints: 50, // default number of points for a property
+    talentSelectLimit: 10, // max number of talents that can be selected
+    propertyAllocateLimit: [0, 100], // scoop of properties that can be allocated,
+    defaultPropertys: { SPR: 20 }, // default properties
     talentConfig: { // config for talent
-        talentPullCount: 10, // number of talents to pull from the talent pool
+        talentPullCount: 20, // number of talents to pull from the talent pool
         talentRate: { 1:100, 2:10, 3:1, total: 1000 }, // rate of talent pull
         additions: {
             TMS: [
@@ -197,8 +197,8 @@ core.config({
         },
     },
     characterConfig: { // config for character
-        characterPullCount: 3,
-        rateableKnife: 10,
+        characterPullCount: 5,
+        rateableKnife: 20,
         propertyWeight: [
             [ 0, 1],
             [ 1, 2],

@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/index.js',
   devtool: 'eval-cheap-module-source-map',
   devServer: {
@@ -23,7 +23,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'public/chunk'),
-    filename: '[name].[chunkhash:5].js',
+    filename: '[name].[chunkhash].js',
     clean: true,
   },
   plugins: [
